@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, CheckCircle2, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Send, CheckCircle2, Phone, Mail, Clock } from 'lucide-react';
 import PremiumButton from './PremiumButton';
 
 const serviceOptions = [
@@ -41,13 +41,13 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="relative py-28 bg-[#061315] overflow-hidden">
+    <section id="contact" className="relative py-16 sm:py-28 bg-[#061315] overflow-hidden">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/3 -left-32 w-96 h-96 rounded-full bg-[#008F8C]/15 blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-10 -right-32 w-96 h-96 rounded-full bg-[#E5A43A]/10 blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/3 -left-32 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#008F8C]/15 blur-[100px] sm:blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-10 -right-32 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#E5A43A]/10 blur-[100px] sm:blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           
           {/* Left Column: Context & Contact Details */}
           <div className="lg:col-span-5 flex flex-col text-left">
@@ -55,7 +55,7 @@ export const ContactSection = () => {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-xs font-semibold tracking-[0.2em] uppercase mb-4"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase mb-4"
             >
               START A CONVERSATION
             </motion.div>
@@ -64,8 +64,8 @@ export const ContactSection = () => {
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#F6F0E5] leading-tight"
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="font-heading font-black text-2xl xs:text-3xl sm:text-4xl lg:text-5xl text-[#F6F0E5] leading-tight"
             >
               Let's Talk About{' '}
               <span className="text-gradient-teal-gold block">
@@ -77,45 +77,45 @@ export const ContactSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-              className="mt-6 text-base sm:text-lg text-[#AAB8B8] leading-relaxed"
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-[#AAB8B8] leading-relaxed"
             >
               Whether you are preparing a major product launch or seeking to scale an existing acquisition machine, our senior partners are ready to review your data.
             </motion.p>
 
             {/* Direct Channel Cards */}
-            <div className="mt-10 flex flex-col gap-4">
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#0A1D1E] border border-white/5 hover:border-[#008F8C]/40 transition-colors">
-                <div className="w-11 h-11 rounded-xl bg-[#008F8C]/15 text-[#008F8C] flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
+            <div className="mt-6 sm:mt-10 flex flex-col gap-3 sm:gap-4">
+              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-2xl bg-[#0A1D1E] border border-white/5 hover:border-[#008F8C]/40 transition-colors">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#008F8C]/15 text-[#008F8C] flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <div>
-                  <span className="text-xs text-[#AAB8B8] block">Email Us Directly</span>
-                  <a href="mailto:growth@uniquomedia.com" className="text-sm font-semibold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
+                <div className="overflow-hidden">
+                  <span className="text-[11px] text-[#AAB8B8] block">Email Us Directly</span>
+                  <a href="mailto:growth@uniquomedia.com" className="text-xs sm:text-sm font-semibold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors truncate block">
                     growth@uniquomedia.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#0A1D1E] border border-white/5 hover:border-[#008F8C]/40 transition-colors">
-                <div className="w-11 h-11 rounded-xl bg-[#008F8C]/15 text-[#FFD67A] flex items-center justify-center">
-                  <Phone className="w-5 h-5" />
+              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-2xl bg-[#0A1D1E] border border-white/5 hover:border-[#008F8C]/40 transition-colors">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#008F8C]/15 text-[#FFD67A] flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-[#AAB8B8] block">Direct Growth Line</span>
-                  <a href="tel:+919876543210" className="text-sm font-semibold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
+                  <span className="text-[11px] text-[#AAB8B8] block">Direct Growth Line</span>
+                  <a href="tel:+919876543210" className="text-xs sm:text-sm font-semibold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
                     +91 98765 43210
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#0A1D1E] border border-white/5">
-                <div className="w-11 h-11 rounded-xl bg-[#008F8C]/15 text-[#008F8C] flex items-center justify-center">
-                  <Clock className="w-5 h-5" />
+              <div className="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 rounded-2xl bg-[#0A1D1E] border border-white/5">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#008F8C]/15 text-[#008F8C] flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-[#AAB8B8] block">Response Guarantee</span>
-                  <span className="text-sm font-semibold text-[#F6F0E5]">Within 24 Hours • Mon to Sat</span>
+                  <span className="text-[11px] text-[#AAB8B8] block">Response Guarantee</span>
+                  <span className="text-xs sm:text-sm font-semibold text-[#F6F0E5]">Within 24 Hours • Mon to Sat</span>
                 </div>
               </div>
             </div>
@@ -126,38 +126,37 @@ export const ContactSection = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:col-span-7 rounded-3xl p-8 sm:p-10 bg-[#0A1D1E] border border-[#008F8C]/30 shadow-[0_20px_50px_rgba(0,0,0,0.6)] glow-teal"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-7 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 bg-[#0A1D1E] border border-[#008F8C]/30 shadow-[0_20px_50px_rgba(0,0,0,0.6)] glow-teal w-full"
           >
             {submitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="py-14 text-center flex flex-col items-center"
+                className="py-10 sm:py-14 text-center flex flex-col items-center"
               >
-                <div className="w-16 h-16 rounded-full bg-[#008F8C]/20 border border-[#008F8C] flex items-center justify-center text-[#FFD67A] mb-5">
-                  <CheckCircle2 className="w-8 h-8" />
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#008F8C]/20 border border-[#008F8C] flex items-center justify-center text-[#FFD67A] mb-4 sm:mb-5">
+                  <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                <h3 className="font-heading font-black text-2xl text-[#F6F0E5] mb-2">
+                <h3 className="font-heading font-black text-xl sm:text-2xl text-[#F6F0E5] mb-2">
                   Proposal Request Received!
                 </h3>
-                <p className="text-sm text-[#AAB8B8] max-w-md mb-8">
+                <p className="text-xs sm:text-sm text-[#AAB8B8] max-w-md mb-6 leading-relaxed">
                   Thank you, <strong className="text-white">{formData.name}</strong>. Our senior growth strategist is already reviewing your details and will send a preliminary action breakdown shortly.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="px-6 py-2.5 rounded-full border border-[#008F8C]/40 text-xs font-semibold text-[#FFD67A] hover:bg-[#008F8C]/15 transition-colors"
+                  className="px-5 sm:px-6 py-2.5 rounded-full border border-[#008F8C]/40 text-xs font-semibold text-[#FFD67A] hover:bg-[#008F8C]/15 transition-colors cursor-pointer"
                 >
                   Send Another Inquiry
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6 text-left">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-6 text-left">
                 {/* Row 1: Name & Business Name */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {/* Name Field with animated gold line */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="relative">
-                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                       Your Name *
                     </label>
                     <input
@@ -168,7 +167,7 @@ export const ContactSection = () => {
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       onFocus={() => setActiveField('name')}
                       onBlur={() => setActiveField(null)}
-                      className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
                     />
                     <div
                       className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#008F8C] to-[#E5A43A] transition-all duration-300 ${
@@ -177,9 +176,8 @@ export const ContactSection = () => {
                     />
                   </div>
 
-                  {/* Business Name Field */}
                   <div className="relative">
-                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                       Business Name *
                     </label>
                     <input
@@ -190,7 +188,7 @@ export const ContactSection = () => {
                       onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
                       onFocus={() => setActiveField('biz')}
                       onBlur={() => setActiveField(null)}
-                      className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
                     />
                     <div
                       className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#008F8C] to-[#E5A43A] transition-all duration-300 ${
@@ -201,9 +199,9 @@ export const ContactSection = () => {
                 </div>
 
                 {/* Row 2: Email & Phone */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="relative">
-                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                       Email Address *
                     </label>
                     <input
@@ -214,7 +212,7 @@ export const ContactSection = () => {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       onFocus={() => setActiveField('email')}
                       onBlur={() => setActiveField(null)}
-                      className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
                     />
                     <div
                       className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#008F8C] to-[#E5A43A] transition-all duration-300 ${
@@ -224,7 +222,7 @@ export const ContactSection = () => {
                   </div>
 
                   <div className="relative">
-                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                       Phone Number *
                     </label>
                     <input
@@ -235,7 +233,7 @@ export const ContactSection = () => {
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       onFocus={() => setActiveField('phone')}
                       onBlur={() => setActiveField(null)}
-                      className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors"
                     />
                     <div
                       className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#008F8C] to-[#E5A43A] transition-all duration-300 ${
@@ -246,15 +244,15 @@ export const ContactSection = () => {
                 </div>
 
                 {/* Row 3: Interested In Dropdown & Budget Dropdown */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
-                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                       I'm Interested In
                     </label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] outline-none focus:border-[#008F8C] transition-colors cursor-pointer"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] outline-none focus:border-[#008F8C] transition-colors cursor-pointer"
                     >
                       {serviceOptions.map((opt, i) => (
                         <option key={i} value={opt} className="bg-[#0A1D1E] text-white">
@@ -265,13 +263,13 @@ export const ContactSection = () => {
                   </div>
 
                   <div>
-                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                    <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                       Approximate Monthly Budget
                     </label>
                     <select
                       value={formData.budget}
                       onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] outline-none focus:border-[#008F8C] transition-colors cursor-pointer"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] outline-none focus:border-[#008F8C] transition-colors cursor-pointer"
                     >
                       {budgetRanges.map((b, i) => (
                         <option key={i} value={b} className="bg-[#0A1D1E] text-white">
@@ -282,19 +280,19 @@ export const ContactSection = () => {
                   </div>
                 </div>
 
-                {/* Row 4: Tell Us About Your Business */}
+                {/* Row 4: Textarea */}
                 <div className="relative">
-                  <label className="text-xs font-semibold text-[#AAB8B8] block mb-2">
+                  <label className="text-xs font-semibold text-[#AAB8B8] block mb-1.5 sm:mb-2">
                     Tell Us About Your Business & Current Goals
                   </label>
                   <textarea
-                    rows={4}
-                    placeholder="Share your primary bottlenecks, targets for this quarter, or any specific channels you wish to scale..."
+                    rows={3}
+                    placeholder="Share your primary bottlenecks, targets for this quarter..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     onFocus={() => setActiveField('message')}
                     onBlur={() => setActiveField(null)}
-                    className="w-full px-4 py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors resize-none"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-[#061315] border border-white/10 text-sm text-[#F6F0E5] placeholder-[#AAB8B8]/40 outline-none focus:border-[#008F8C] transition-colors resize-none"
                   />
                   <div
                     className={`absolute bottom-1 left-0 h-[2px] bg-gradient-to-r from-[#008F8C] to-[#E5A43A] transition-all duration-300 ${
@@ -303,11 +301,11 @@ export const ContactSection = () => {
                   />
                 </div>
 
-                {/* Submit Button with bottom-to-top animated fill */}
+                {/* Submit Button */}
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full font-heading text-sm font-bold tracking-wide overflow-hidden bg-[#008F8C] border border-[#008F8C] text-white hover:text-black shadow-[0_0_25px_rgba(0,143,140,0.3)] transition-all duration-300 cursor-pointer"
+                    className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 sm:py-4 rounded-full font-heading text-sm font-bold tracking-wide overflow-hidden bg-[#008F8C] border border-[#008F8C] text-white hover:text-black shadow-[0_0_25px_rgba(0,143,140,0.3)] transition-all duration-300 cursor-pointer"
                   >
                     <span className="absolute inset-x-0 bottom-0 h-0 w-full transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:h-full bg-gradient-to-t from-[#E5A43A] to-[#FFD67A] z-0 pointer-events-none" />
                     <span className="relative z-10 flex items-center gap-2">
