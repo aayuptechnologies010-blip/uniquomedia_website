@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Users, ShieldCheck, Zap, Award, Compass, ArrowRight } from 'lucide-react';
+import { Target, ShieldCheck, Zap, Award, Compass, Lightbulb, Users, Sparkles } from 'lucide-react';
 import PremiumButton from '../components/PremiumButton';
+import InteractiveHeroVisual from '../components/InteractiveHeroVisual';
 import StatsBar from '../components/StatsBar';
 import WhyChooseUs from '../components/WhyChooseUs';
 import CTASection from '../components/CTASection';
@@ -34,23 +35,37 @@ const leadership = [
     name: 'Aayup K.',
     role: 'Managing Partner & Chief Strategist',
     bio: 'Pioneered conversion-engineered funnels across real estate and e-commerce with over 8 years of growth engineering.',
-    accent: '#008F8C',
   },
   {
     name: 'Rohan Verma',
     role: 'Head of Performance & Paid Media',
     bio: 'Former enterprise media buyer directing $10M+ in cumulative ad budgets across Google, Meta, and programmatic DSPs.',
-    accent: '#E5A43A',
   },
   {
     name: 'Devika Sharma',
     role: 'Creative Director & Brand Architecture',
     bio: 'Specializes in high-luxury visual identity, psychological video hooks, and high-retention landing page design systems.',
-    accent: '#FFD67A',
   },
 ];
 
 export const AboutPage = () => {
+  const aboutPills = [
+    {
+      icon: Lightbulb,
+      label: 'Creative Core',
+      value: 'Strategy Driven',
+      position: '-top-3 right-0 sm:-right-4',
+      color: 'gold',
+    },
+    {
+      icon: Users,
+      label: 'Collaboration',
+      value: 'Agile Sprints',
+      position: '-bottom-4 left-0 sm:-left-6',
+      color: 'teal',
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
@@ -59,25 +74,52 @@ export const AboutPage = () => {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       className="pt-28 pb-16"
     >
-      {/* Hero Header */}
+      {/* Hero Header with 3D Creative Team Hero Visual */}
       <section className="relative py-16 overflow-hidden">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#008F8C]/15 blur-[140px] pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-            OUR STORY & PHILOSOPHY
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+                CREATIVE STRATEGY + HUMAN COLLABORATION
+              </div>
+
+              <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#F6F0E5] leading-tight">
+                Creativity Meets Strategy.{' '}
+                <span className="text-gradient-teal-gold block">
+                  Growth Follows.
+                </span>
+              </h1>
+
+              <p className="mt-6 text-lg text-[#AAB8B8] max-w-xl leading-relaxed">
+                Most agencies operate on impressions and vanity metrics. We operate on customer acquisition cost, conversion rate optimization, and compound enterprise revenue.
+              </p>
+
+              <div className="mt-8 flex items-center gap-4">
+                <PremiumButton href="/contact" variant="primary">
+                  Partner With Our Strategists
+                </PremiumButton>
+                <PremiumButton href="/services" variant="secondary" icon="upRight">
+                  Explore Ecosystem
+                </PremiumButton>
+              </div>
+            </div>
+
+            {/* Right 3D Visual */}
+            <div className="lg:col-span-5 relative flex items-center justify-center">
+              <InteractiveHeroVisual
+                imageSrc="/about-hero.jpg"
+                alt="Uniquo Media 3D Creative Strategy Team"
+                badgeText="Strategy Core System"
+                badgeMetric="360° Vision"
+                floatingPills={aboutPills}
+              />
+            </div>
+
           </div>
-
-          <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-[#F6F0E5] leading-tight max-w-4xl mx-auto">
-            We Built Uniquo Media To Stop The Waste Of{' '}
-            <span className="text-gradient-teal-gold">
-              Marketing Capital.
-            </span>
-          </h1>
-
-          <p className="mt-6 text-lg text-[#AAB8B8] max-w-2xl mx-auto leading-relaxed">
-            Most agencies operate on impressions and vanity metrics. We operate on customer acquisition cost, conversion rate optimization, and compound enterprise revenue.
-          </p>
         </div>
       </section>
 
@@ -134,12 +176,6 @@ export const AboutPage = () => {
                     </div>
                   );
                 })}
-              </div>
-
-              <div className="mt-8">
-                <PremiumButton href="/contact" variant="primary">
-                  Partner With Our Strategists
-                </PremiumButton>
               </div>
             </div>
 
