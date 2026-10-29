@@ -1,28 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Compass, TrendingUp, Cpu, MessageSquare } from 'lucide-react';
+import { Users, Video, PenTool, TrendingUp } from 'lucide-react';
 import PremiumButton from './PremiumButton';
 
 const highlights = [
   {
-    icon: Compass,
-    title: 'Strategic Thinking',
-    desc: 'Bespoke marketing architecture tailored to your unique market positioning.',
+    icon: Users,
+    title: 'Influencer Marketing',
+    desc: 'Pre-vetted creator matchmaking across 450+ verified creators for genuine reach and trust.',
+  },
+  {
+    icon: Video,
+    title: 'High-Impact Video Editing',
+    desc: 'Cinematic pacing, viral sound design, and dynamic motion graphics tailored for Reels & Shorts.',
+  },
+  {
+    icon: PenTool,
+    title: 'Viral Scripting',
+    desc: 'High-retention hooks and psychological conversion copy engineered to stop the scroll.',
   },
   {
     icon: TrendingUp,
-    title: 'Creative Execution',
-    desc: 'High-converting ad designs, copy, and video assets that stand out.',
-  },
-  {
-    icon: Cpu,
-    title: 'Data-Driven Decisions',
-    desc: 'Continuous real-time tracking and statistical optimization to scale ROAS.',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Transparent Communication',
-    desc: 'Direct access to strategists and executive-grade weekly reporting.',
+    title: 'Performance Advertising',
+    desc: 'Precision Meta & Google paid media campaigns structured for high-intent customer acquisition and ROAS.',
   },
 ];
 

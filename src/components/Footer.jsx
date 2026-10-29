@@ -6,20 +6,20 @@ import UniquoLogo from './UniquoLogo';
 
 const companyLinks = [
   { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about' },
+  { name: 'Influencer Marketing', path: '/#influencer-marketing' },
   { name: 'Portfolio', path: '/portfolio' },
   { name: 'Our Process', path: '/process' },
-  { name: 'Blog & Insights', path: '/blog' },
+  { name: 'About Us', path: '/about' },
   { name: 'Contact', path: '/contact' },
 ];
 
 const serviceLinks = [
-  { name: 'Digital Marketing', path: '/services' },
-  { name: 'SEO Optimization', path: '/services' },
-  { name: 'Social Media Marketing', path: '/services' },
-  { name: 'Google Ads / PPC', path: '/services' },
-  { name: 'Meta Ads', path: '/services' },
-  { name: 'Website Development', path: '/services' },
+  { name: 'Influencer Marketing', path: '/#influencer-marketing' },
+  { name: 'High-Impact Video Editing', path: '/services#video-editing' },
+  { name: 'Performance Advertising (Meta/Google)', path: '/services#advertising' },
+  { name: 'Viral Scripting & Storyboards', path: '/services#scripting' },
+  { name: 'Content Creation & UGC', path: '/services#content' },
+  { name: 'Social Media Growth', path: '/services#social' },
 ];
 
 const resourceLinks = [

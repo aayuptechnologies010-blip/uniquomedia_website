@@ -69,9 +69,9 @@ export const IndustriesSection = () => {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-xs font-semibold tracking-[0.2em] uppercase mb-4"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-xs font-bold tracking-[0.2em] uppercase mb-4"
           >
-            SECTORS WE TRANSFORM
+            OPEN FOR EVERY FIELD
           </motion.div>
 
           <motion.h2
@@ -81,9 +81,9 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#F6F0E5] leading-tight"
           >
-            Tailored Growth Across{' '}
-            <span className="text-gradient-teal-gold">
-              Diverse Industries.
+            We Are Open For Every Field.{' '}
+            <span className="text-gradient-teal-gold block sm:inline">
+              Tailored For Any Industry.
             </span>
           </motion.h2>
 
@@ -94,7 +94,7 @@ export const IndustriesSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-4 text-base sm:text-lg text-[#AAB8B8]"
           >
-            Specialized marketing frameworks calibrated for the distinct compliance, customer journey, and sales cycle of your industry.
+            No matter what business or niche you operate in, our creator, viral scripting, video edition, and performance marketing frameworks adapt seamlessly to drive measurable customer revenue.
           </motion.p>
         </div>
 
@@ -103,13 +103,14 @@ export const IndustriesSection = () => {
           {industries.map((ind, idx) => {
             const Icon = ind.icon;
             return (
-              <motion.div
+              <motion.a
                 key={idx}
+                href="/contact"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.07, ease: [0.22, 1, 0.36, 1] }}
-                className="interactive-card group relative rounded-3xl p-6 bg-[#061315] border border-white/10 hover:border-[#E5A43A] overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(229,164,58,0.2)] flex flex-col justify-between"
+                className="interactive-card group relative rounded-3xl p-6 bg-[#061315] border border-white/10 hover:border-[#E5A43A] overflow-hidden transition-all duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(229,164,58,0.2)] flex flex-col justify-between cursor-pointer"
               >
                 {/* Signature Bottom-to-Top Fill (translates translateY(100%) -> translateY(0%)) */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#008F8C] via-[#006B69] to-[#0A1D1E] translate-y-full group-hover:translate-y-0 transition-transform duration-450 ease-[cubic-bezier(0.22,1,0.36,1)] pointer-events-none z-0" />
@@ -117,7 +118,7 @@ export const IndustriesSection = () => {
                 {/* Card Content in Front */}
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-5">
-                    {/* Icon container: moves upward slightly on hover */}
+                    {/* Icon container */}
                     <div className="w-12 h-12 rounded-2xl bg-[#008F8C]/15 border border-[#008F8C]/30 text-[#FFD67A] flex items-center justify-center transform group-hover:-translate-y-1 group-hover:bg-[#E5A43A] group-hover:text-[#061315] group-hover:border-[#FFD67A] transition-all duration-300 shadow-sm">
                       <Icon className="w-6 h-6 transition-colors duration-300" />
                     </div>
@@ -140,9 +141,30 @@ export const IndustriesSection = () => {
                   <span>Explore Playbook</span>
                   <span>→</span>
                 </div>
-              </motion.div>
+              </motion.a>
             );
           })}
+        </div>
+
+        {/* Bottom Callout: Open for Every Field & Custom Niche */}
+        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-[#061315] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <span className="text-xs font-bold text-[#FFD67A] uppercase tracking-wider block mb-1">
+              Your Industry Not Listed Above?
+            </span>
+            <h4 className="font-heading font-bold text-xl sm:text-2xl text-[#F6F0E5]">
+              We Are 100% Open For Every Field &amp; Any Custom Niche.
+            </h4>
+            <p className="text-xs sm:text-sm text-[#AAB8B8] mt-1 max-w-xl">
+              From emerging D2C products and creative personal brands to specialized B2B and traditional trade — we formulate a custom growth architecture tailored for your exact audience.
+            </p>
+          </div>
+          <a
+            href="/contact"
+            className="px-6 py-3.5 rounded-full bg-gradient-to-r from-[#008F8C] to-[#006B69] hover:from-[#E5A43A] hover:to-[#FFD67A] text-white hover:text-black font-semibold text-xs tracking-wide transition-all shadow-md flex-shrink-0"
+          >
+            Get Custom Playbook For Your Field →
+          </a>
         </div>
 
       </div>

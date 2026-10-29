@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const statsData = [
-  { value: 100, suffix: '+', label: 'Brands Empowered', desc: 'Across global industries' },
-  { value: 250, suffix: '+', label: 'Campaigns Launched', desc: 'Data-engineered performance' },
-  { value: 95, suffix: '%', label: 'Client Satisfaction', desc: 'Long-term partnership retention' },
-  { value: 5, suffix: '+', label: 'Marketing Solutions', desc: 'Integrated 360° digital ecosystem' },
+  { value: 28, suffix: '+', label: 'Brands Partnered', desc: 'Enterprise & high-growth D2C' },
+  { value: 65, suffix: '+', label: 'Campaigns Launched', desc: 'Creator & viral video ads' },
+  { value: 98, suffix: '%', label: 'Client Satisfaction', desc: 'Long-term partnership retention' },
+  { value: 6, suffix: '+', label: 'Core Capabilities', desc: 'Influencer, scripting & video edits' },
 ];
 
 const AnimatedCounter = ({ target, duration = 2, suffix = '' }) => {

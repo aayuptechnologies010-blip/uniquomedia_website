@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="100%" height="100%">
+  <!-- Xiaomi Orange Squircle -->
+  <g transform="translate(10, 8)">
+    <rect x="0" y="0" width="54" height="54" rx="20" fill="#FF6900" />
+    <!-- Iconic 'mi' mark in white -->
+    <!-- 'm' letter -->
+    <path d="M15 17 L21 17 L21 37 L15 37 Z" fill="#FFFFFF" />
+    <path d="M21 17 C21 17 25 15 29 17 C33 19 33 24 33 25 L33 37 L28 37 L28 26 C28 23 26 21.5 24 21.5 C22 21.5 21 23 21 26 L21 37" fill="#FFFFFF" />
+    <path d="M28 17 C28 17 32 15 36 17 C40 19 40 24 40 25 L40 37 L35 37 L35 26 C35 23 33 21.5 31 21.5 L31 17" fill="#FFFFFF" opacity="0.95" />
+    <!-- 'i' letter -->
+    <rect x="36" y="22" width="4.5" height="15" fill="#FFFFFF" rx="1" />
+  </g>
+  <!-- Xiaomi Wordmark -->
+  <text x="76" y="44" font-family="'Inter', 'Outfit', sans-serif" font-size="32" font-weight="600" letter-spacing="0.5" fill="#FFFFFF">
+    xiaomi
+  </text>
+  <text x="77" y="58" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" letter-spacing="2.5" fill="#FF6900">INNOVATION FOR EVERYONE</text>
+</svg>

@@ -1,272 +1,235 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, TrendingUp, BarChart, Users, Award } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, BarChart, Users, Award, Sparkles, CheckCircle2 } from 'lucide-react';
+import PremiumButton from './PremiumButton';
 
 const projects = [
   {
     id: 1,
-    industry: 'Real Estate',
-    category: 'Lead Generation Campaign',
-    client: 'Skyline Luxury Residences',
-    result: '+340% Qualified Site Visits',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80',
+    industry: 'Automotive & Consumer',
+    category: 'Influencer Marketing & Video Scripting',
+    client: 'Bajaj',
+    logo: '/logos/bajaj.svg',
+    result: '+18.4M Reach & 4.8x Campaign ROI',
+    image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=80',
     metrics: [
-      { label: 'CPA Reduction', value: '-42%' },
-      { label: 'High-Intent Leads', value: '1,840+' },
-      { label: 'ROAS', value: '6.8x' },
+      { label: 'Total Reach', value: '18.4M+' },
+      { label: 'Creator Collabs', value: '45+' },
+      { label: 'Campaign ROI', value: '4.8x' },
     ],
-    accentColor: '#008F8C',
-    summary: 'Restructured full Meta & Google search campaign with geo-targeted video tours and dynamic WhatsApp instant verification funnel.',
+    accentColor: '#0055A5',
+    summary: 'Engineered nationwide creator storytelling campaign, viral scripted Reels, and festive video production that drove record product test drives and digital footfalls.',
   },
   {
     id: 2,
-    industry: 'E-Commerce',
-    category: 'Performance Marketing',
-    client: 'Aura Lifestyle & Apparel',
-    result: '4.2x Revenue Growth in 90 Days',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80',
+    industry: 'OTT & Entertainment',
+    category: 'Viral Content Creation & Video Edition',
+    client: 'JioHotstar',
+    logo: '/logos/jiohotstar.svg',
+    result: '45M+ Organic Reach & #1 Trending',
+    image: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1000&q=80',
     metrics: [
-      { label: 'Monthly GMV', value: '$840K+' },
-      { label: 'Customer LTV', value: '+35%' },
-      { label: 'Average ROAS', value: '5.2x' },
+      { label: 'Organic Impressions', value: '45M+' },
+      { label: 'Avg Watch Time', value: '92%' },
+      { label: 'Subscriber Uplift', value: '+34%' },
     ],
-    accentColor: '#E5A43A',
-    summary: 'Built high-converting creative testing sandboxes combined with TikTok/Meta catalog retargeting and frictionless 1-click cart recovery.',
+    accentColor: '#00E5A3',
+    summary: 'Scripted and edited high-velocity pop-culture video content and multi-platform influencer hype engines for marquee OTT show launches.',
   },
   {
     id: 3,
-    industry: 'Education',
-    category: 'SEO + Social Media',
-    client: 'Apex Global Business School',
-    result: '120,000+ Monthly Organic Traffic',
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80',
+    industry: 'Consumer Tech & Mobile',
+    category: 'Tech Influencer & Scripted Unboxing',
+    client: 'Xiaomi',
+    logo: '/logos/xiaomi.svg',
+    result: '12.8M Views & 3.4x Pre-Orders',
+    image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1000&q=80',
     metrics: [
-      { label: 'Top 3 Keywords', value: '450+' },
-      { label: 'Student Inquiries', value: '3,200+' },
-      { label: 'Organic Share', value: '78%' },
+      { label: 'Flagship Pre-Orders', value: '3.4x' },
+      { label: 'Total Views', value: '12.8M' },
+      { label: 'Engagement Rate', value: '16.5%' },
     ],
-    accentColor: '#008F8C',
-    summary: 'Targeted long-tail career intent queries alongside high-engagement alumnus thought leadership reels on LinkedIn & Instagram.',
+    accentColor: '#FF6900',
+    summary: 'End-to-end creative scripting, top tier tech influencer onboarding, and dynamic fast-paced video edits for flagship smartphone launch.',
   },
   {
     id: 4,
-    industry: 'Healthcare',
-    category: 'Brand Awareness & Patient Growth',
-    client: 'NovaCare Wellness Centers',
-    result: '98% Appointment Booking Capacity',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
+    industry: 'Eco-Friendly D2C',
+    category: 'Performance & Influencer Marketing',
+    client: 'Beco',
+    logo: '/logos/beco.svg',
+    result: '+280% Sales Growth & 5.6x ROAS',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1000&q=80',
     metrics: [
-      { label: 'Patient Inquiries', value: '+210%' },
-      { label: 'Cost Per Booking', value: '-38%' },
-      { label: 'Google Review Score', value: '4.9★' },
+      { label: 'Blended ROAS', value: '5.6x' },
+      { label: 'Sales Growth', value: '+280%' },
+      { label: 'Influencer Reach', value: '8.5M+' },
     ],
-    accentColor: '#FFD67A',
-    summary: 'Engineered hyper-local Google Maps SEO, trust-centered patient documentary video spots, and automated SMS appointment workflows.',
+    accentColor: '#138A56',
+    summary: 'Built relatable UGC creator videos and scripted sustainability hook ads paired with dynamic video editing that drove direct conversions and recurring orders.',
+  },
+  {
+    id: 5,
+    industry: 'Clothing & Men\'s Fashion',
+    category: 'Lookbook Scripting & High-Energy Video Edits',
+    client: 'Snitch',
+    logo: '/logos/snitch.svg',
+    result: '22M+ Views & 6.2x Blended ROAS',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80',
+    metrics: [
+      { label: 'Video Views', value: '22M+' },
+      { label: 'Blended ROAS', value: '6.2x' },
+      { label: 'Catalog Lift', value: '+45%' },
+    ],
+    accentColor: '#E5A43A',
+    summary: 'High-tempo apparel lookbooks, rapid transitions, trendy music synchronization, and streetwear influencer seeding across India.',
+  },
+  {
+    id: 6,
+    industry: 'Youth Streetwear',
+    category: 'Relatable Scripted Skits & Creator Drops',
+    client: 'Bewakoof',
+    logo: '/logos/bewakoof.svg',
+    result: '15M+ Engagement & +42% Conversions',
+    image: 'https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=1000&q=80',
+    metrics: [
+      { label: 'Total Engagement', value: '15M+' },
+      { label: 'Conversion Lift', value: '+42%' },
+      { label: 'Viral Reels', value: '38+' },
+    ],
+    accentColor: '#FDD835',
+    summary: 'Engineered relatable college skits, meme marketing campaigns, and creator UGC challenges resulting in widespread viral brand resonance.',
   },
 ];
 
 export const PortfolioSection = () => {
-  const [selectedCase, setSelectedCase] = useState(null);
+  const [selectedFilter, setSelectedFilter] = useState('All');
+  const filters = ['All', 'Influencer Marketing', 'Video Production', 'Performance Ads'];
 
   return (
-    <section id="portfolio" className="relative py-28 bg-[#061315] overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-1/4 -right-24 w-96 h-96 rounded-full bg-[#008F8C]/15 blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-24 w-96 h-96 rounded-full bg-[#E5A43A]/10 blur-[140px] pointer-events-none" />
+    <section id="portfolio" className="relative py-28 bg-[#061315] overflow-hidden border-t border-[#008F8C]/20">
+      {/* Background Lighting */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#008F8C]/12 blur-[160px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-[#E5A43A]/10 blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#008F8C]/15 border border-[#008F8C]/40 text-[#FFD67A] text-xs font-semibold tracking-[0.2em] uppercase mb-4"
-            >
-              PROVEN TRACK RECORD
-            </motion.div>
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#008F8C]/20 to-[#FFD67A]/20 border border-[#FFD67A]/40 text-[#FFD67A] text-xs font-bold tracking-[0.2em] uppercase mb-4 shadow-sm"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-[#FFD67A]" />
+            PROVEN TRACK RECORD
+          </motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-[#F6F0E5] leading-tight"
-            >
-              Strategy Is Good.{' '}
-              <span className="text-gradient-teal-gold block sm:inline">
-                Results Are Better.
-              </span>
-            </motion.h2>
-          </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-[#F6F0E5] leading-tight"
+          >
+            Work That Transformed Brand Trajectories.{' '}
+            <span className="text-gradient-teal-gold block sm:inline">
+              Real Data. Real ROAS.
+            </span>
+          </motion.h2>
 
-          <p className="text-sm text-[#AAB8B8] max-w-sm font-normal">
-            Explore verified growth metrics generated across real estate, e-commerce, healthcare, and higher education.
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="mt-5 text-sm sm:text-lg text-[#AAB8B8] max-w-2xl leading-relaxed font-normal"
+          >
+            Explore case studies from industry titans and high-growth consumer labels who scaled with Uniquo Media's creator and performance engines.
+          </motion.p>
         </div>
 
-        {/* 4 Large Featured Case Study Cards with Real Photos & Hover Transitions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
+        {/* Portfolio Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          {projects.map((item, idx) => (
             <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 40 }}
+              key={item.id}
+              initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              onClick={() => setSelectedCase(project)}
-              className="group relative rounded-3xl overflow-hidden bg-[#0A1D1E] border border-white/10 hover:border-[#E5A43A] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,143,140,0.25)] cursor-pointer flex flex-col justify-between"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              whileHover={{ y: -8 }}
+              className="group relative rounded-3xl bg-gradient-to-b from-[#0F282A] to-[#071719] border border-white/15 hover:border-[#FFD67A]/60 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.6)] hover:shadow-[0_20px_50px_rgba(0,143,140,0.25)]"
             >
-              {/* Visual Presentation Canvas with Real Photographic Imagery */}
-              <div className="relative h-64 sm:h-76 w-full overflow-hidden p-8 flex flex-col justify-between">
-                
-                {/* Background Image: scales 1 -> 1.08 on hover */}
+              {/* Image Preview with Dark Gradient Overlay */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-black">
                 <img
-                  src={project.image}
-                  alt={project.client}
-                  className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700 ease-out filter brightness-70 contrast-105"
+                  src={item.image}
+                  alt={item.client}
+                  className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700 ease-out brightness-90 contrast-105"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071719] via-[#071719]/40 to-transparent" />
 
-                {/* Dark Teal / Black Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1D1E] via-[#0A1D1E]/60 to-[#061315]/40 group-hover:opacity-80 transition-opacity duration-300" />
-
-                {/* Top Header Tags */}
-                <div className="relative z-10 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="px-3.5 py-1 rounded-full bg-[#061315]/90 backdrop-blur-md border border-[#008F8C]/50 text-xs font-semibold text-[#FFD67A] uppercase tracking-wider">
-                      {project.industry}
-                    </span>
-                    <span className="text-xs text-[#F6F0E5]/90 hidden sm:inline bg-black/40 backdrop-blur-sm px-2.5 py-0.5 rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  {/* Circular Action Arrow that rotates 0 -> 45deg on hover */}
-                  <div className="w-10 h-10 rounded-full bg-[#061315]/90 border border-white/20 group-hover:border-[#E5A43A] group-hover:bg-[#E5A43A] flex items-center justify-center text-[#F6F0E5] group-hover:text-[#061315] transition-all duration-300 shadow-md">
-                    <ArrowUpRight className="w-5 h-5 transform group-hover:rotate-45 transition-transform duration-300" />
-                  </div>
+                {/* Brand Logo Floating Badge */}
+                <div className="absolute top-4 left-4 z-10 px-3 py-1.5 rounded-xl bg-[#061315]/90 border border-white/15 backdrop-blur-md shadow-lg flex items-center gap-2">
+                  <img src={item.logo} alt={item.client} className="h-5 w-auto object-contain max-w-[80px]" />
                 </div>
 
-                {/* Big Result Badge inside Visual */}
-                <div className="relative z-10 transform transition-transform duration-500 group-hover:-translate-y-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#AAB8B8] block mb-1">
-                    Primary Key Metric
-                  </span>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-heading text-[#F6F0E5] group-hover:text-[#FFD67A] transition-colors drop-shadow-md">
-                    {project.result}
-                  </div>
+                {/* Top Right Result Tag */}
+                <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-[#008F8C]/80 backdrop-blur-md text-white text-[11px] font-bold shadow-md">
+                  {item.result.split('&')[0]}
                 </div>
               </div>
 
-              {/* Bottom Details Section */}
-              <div className="p-7 flex flex-col justify-between flex-1 bg-[#0A1D1E]">
+              {/* Card Body */}
+              <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 relative z-10">
                 <div>
-                  <h3 className="text-xl font-heading font-bold text-[#F6F0E5] group-hover:text-white transition-colors mb-2">
-                    {project.client}
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-[11px] font-bold text-[#FFD67A] uppercase tracking-wider">
+                      {item.industry}
+                    </span>
+                    <div className="w-7 h-7 rounded-full bg-white/5 group-hover:bg-[#FFD67A]/20 flex items-center justify-center text-[#AAB8B8] group-hover:text-[#FFD67A] transition-all">
+                      <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </div>
+                  </div>
+
+                  <h3 className="font-heading font-black text-2xl text-[#F6F0E5] group-hover:text-[#FFD67A] transition-colors mb-2">
+                    {item.client}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#AAB8B8] line-clamp-2 leading-relaxed font-normal">
-                    {project.summary}
+
+                  <p className="text-xs sm:text-sm text-[#AAB8B8] leading-relaxed line-clamp-3 mb-6">
+                    {item.summary}
                   </p>
                 </div>
 
-                {/* Metrics 3-Col Bar */}
-                <div className="mt-6 pt-5 border-t border-white/10 grid grid-cols-3 gap-2">
-                  {project.metrics.map((m, mIdx) => (
-                    <div key={mIdx}>
-                      <span className="text-[10px] uppercase font-semibold text-[#AAB8B8] block truncate">
-                        {m.label}
-                      </span>
-                      <span className="text-sm sm:text-base font-bold font-heading text-[#FFD67A]">
+                {/* 3 Metric Pills */}
+                <div className="grid grid-cols-3 gap-2 pt-4 border-t border-white/10">
+                  {item.metrics.map((m, mIdx) => (
+                    <div key={mIdx} className="p-2.5 rounded-xl bg-black/40 border border-white/5 text-center">
+                      <span className="text-xs sm:text-sm font-black font-heading text-[#FFD67A] block">
                         {m.value}
+                      </span>
+                      <span className="text-[9px] text-[#AAB8B8] block mt-0.5 font-medium leading-tight">
+                        {m.label}
                       </span>
                     </div>
                   ))}
                 </div>
-
-                {/* CTA sliding in from bottom */}
-                <div className="mt-5 pt-3 flex items-center justify-between text-xs font-semibold text-[#008F8C] group-hover:text-[#FFD67A] transition-colors">
-                  <span>View Case Study Breakdown</span>
-                  <span className="transform translate-x-0 group-hover:translate-x-1.5 transition-transform duration-300">→</span>
-                </div>
               </div>
-
             </motion.div>
           ))}
         </div>
 
+        {/* View All Campaigns Button */}
+        <div className="mt-16 text-center">
+          <PremiumButton href="/portfolio" variant="primary" icon="arrow" className="text-sm px-8 py-4">
+            View All Verified Brand Case Studies
+          </PremiumButton>
+        </div>
+
       </div>
-
-      {/* Case Study Modal Breakdown */}
-      <AnimatePresence>
-        {selectedCase && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative w-full max-w-2xl bg-[#0A1D1E] border border-[#008F8C]/60 rounded-3xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.9)] max-h-[90vh] overflow-y-auto"
-            >
-              <button
-                onClick={() => setSelectedCase(null)}
-                className="absolute top-5 right-5 text-gray-400 hover:text-white text-2xl font-light cursor-pointer"
-              >
-                ✕
-              </button>
-
-              <div className="relative h-48 sm:h-56 w-full rounded-2xl overflow-hidden mb-6">
-                <img src={selectedCase.image} alt={selectedCase.client} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1D1E] via-transparent to-black/30" />
-                <div className="absolute bottom-4 left-4">
-                  <div className="inline-block px-3 py-1 rounded-full bg-[#008F8C]/90 border border-[#008F8C] text-[#F6F0E5] text-xs font-semibold tracking-wider uppercase">
-                    {selectedCase.industry} • {selectedCase.category}
-                  </div>
-                </div>
-              </div>
-
-              <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#F6F0E5] mb-2">
-                {selectedCase.client}
-              </h3>
-
-              <div className="text-lg font-bold text-[#FFD67A] mb-4">
-                Achieved: {selectedCase.result}
-              </div>
-
-              <p className="text-sm text-[#AAB8B8] leading-relaxed mb-6 font-normal">
-                {selectedCase.summary}
-              </p>
-
-              {/* Verified Metrics in Modal */}
-              <div className="grid grid-cols-3 gap-4 p-4 rounded-2xl bg-[#061315] border border-white/10 mb-6">
-                {selectedCase.metrics.map((m, i) => (
-                  <div key={i} className="text-center">
-                    <span className="text-[11px] text-[#AAB8B8] block">{m.label}</span>
-                    <span className="text-lg font-bold text-[#FFD67A]">{m.value}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex justify-end gap-3">
-                <button
-                  onClick={() => setSelectedCase(null)}
-                  className="px-5 py-2.5 rounded-full border border-white/20 text-xs font-semibold text-white hover:bg-white/5 cursor-pointer"
-                >
-                  Close
-                </button>
-                <a
-                  href="/contact"
-                  onClick={() => setSelectedCase(null)}
-                  className="px-6 py-2.5 rounded-full bg-gradient-to-r from-[#008F8C] to-[#006B69] hover:from-[#E5A43A] hover:to-[#FFD67A] text-white hover:text-black font-semibold text-xs transition-colors flex items-center gap-2 cursor-pointer"
-                >
-                  Request Similar Strategy →
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </section>
   );
 };

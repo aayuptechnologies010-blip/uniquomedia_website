@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="100%" height="100%">
+  <!-- Fabindia Traditional Paisley / Feather Motif -->
+  <g transform="translate(10, 10)">
+    <circle cx="25" cy="25" r="23" fill="#871834" />
+    <!-- Stylized Paisley / block motif -->
+    <path d="M25 12 C18 16 16 23 20 29 C24 35 32 34 32 27 C32 19 25 12 25 12 Z" fill="#E5A43A" />
+    <circle cx="25" cy="26" r="3" fill="#FFFFFF" />
+  </g>
+  <!-- fabindia bespoke lowercase wordmark -->
+  <text x="68" y="44" font-family="'Georgia', 'Times New Roman', serif" font-size="33" font-weight="700" letter-spacing="-0.5" fill="#FFFFFF">
+    fab<tspan fill="#E5A43A">india</tspan>
+  </text>
+  <text x="70" y="58" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" letter-spacing="3" fill="#871834">CELEBRATE INDIA • CRAFT &amp; WEAR</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 70" width="100%" height="100%">
+  <!-- Bewakoof Yellow Emblem with Spectacles -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="50" height="50" rx="14" fill="#FDD835" />
+    <!-- Iconic quirky round spectacles -->
+    <circle cx="16" cy="22" r="8" fill="none" stroke="#111111" stroke-width="3" />
+    <circle cx="34" cy="22" r="8" fill="none" stroke="#111111" stroke-width="3" />
+    <!-- Spectacle bridge -->
+    <path d="M24 20 Q25 18 26 20" stroke="#111111" stroke-width="3" fill="none" />
+    <!-- Happy smile below -->
+    <path d="M18 36 Q25 43 32 36" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+  <!-- Bewakoof lowercase wordmark -->
+  <text x="74" y="44" font-family="'Inter', 'Outfit', sans-serif" font-size="33" font-weight="900" letter-spacing="-0.5" fill="#FFFFFF">
+    bewakoof<tspan font-size="14" font-weight="700" fill="#FDD835" dy="-14">®</tspan>
+  </text>
+  <text x="75" y="58" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.5" fill="#FDD835">WHAT TRENDS WEAR</text>
+</svg>

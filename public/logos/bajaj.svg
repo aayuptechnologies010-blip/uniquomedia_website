@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="100%" height="100%">
+  <!-- Bajaj Hexagonal Wing Emblem -->
+  <g transform="translate(10, 8)">
+    <!-- Outer hexagon frame -->
+    <path d="M27 0 L49 13 L49 39 L27 52 L5 39 L5 13 Z" fill="#0055A5" rx="3" />
+    <!-- Inner White stylized flying B / arrows -->
+    <path d="M19 16 L31 23 L19 30 L19 36 L38 25 L38 21 L19 10 Z" fill="#FFFFFF" />
+    <path d="M21 34 L32 40 L21 46 Z" fill="#FFFFFF" opacity="0.9" />
+  </g>
+  <!-- BAJAJ Wordmark in authentic bold styling -->
+  <text x="75" y="44" font-family="'Inter', 'Montserrat', 'Segoe UI', sans-serif" font-size="34" font-weight="900" letter-spacing="4" fill="#0055A5">BAJAJ</text>
+  <text x="76" y="58" font-family="'Inter', 'Segoe UI', sans-serif" font-size="8.5" font-weight="700" letter-spacing="3" fill="#AAB8B8" opacity="0.85">DISTINCTLY AHEAD</text>
+</svg>

@@ -115,3 +115,24 @@
 .animate-pulse-glow {
   animation: pulseGlow 8s ease-in-out infinite;
 }
+
+/* Continuous Marquee with Hover Pause */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 18s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused !important;
+}

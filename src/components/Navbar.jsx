@@ -6,20 +6,21 @@ import UniquoLogo from './UniquoLogo';
 import PremiumButton from './PremiumButton';
 
 const servicesList = [
-  { name: 'Digital Marketing', desc: 'Full-funnel organic & paid growth acceleration', path: '/services#digital-marketing' },
-  { name: 'SEO', desc: 'Organic visibility, technical optimization & high-intent traffic', path: '/services#seo' },
-  { name: 'Social Media Marketing', desc: 'Engaging content & community building at scale', path: '/services#social-media' },
-  { name: 'Google Ads / PPC', desc: 'High-ROI search, performance max & display campaigns', path: '/services#google-ads' },
-  { name: 'Meta Ads', desc: 'Hyper-targeted Instagram & Facebook conversion campaigns', path: '/services#meta-ads' },
-  { name: 'Content Marketing', desc: 'Storytelling, video production & inbound authority', path: '/services#content' },
-  { name: 'Branding', desc: 'Identity design, positioning & brand guidelines', path: '/services#branding' },
-  { name: 'Website Design & Development', desc: 'Fast, high-converting interactive digital experiences', path: '/services#web-development' },
+  { name: 'Influencer Marketing', desc: 'Creator scouting, talent partnerships & viral campaigns', path: '/services/influencer-marketing' },
+  { name: 'Scripting', desc: 'High-hook narrative scripting & conversion video copy', path: '/services/scripting' },
+  { name: 'Video Editing', desc: 'Viral Reels, Shorts, high-energy pacing & sound design', path: '/services/video-editing' },
+  { name: 'Content Creation', desc: 'Thumb-stopping visuals, UGC production & creative shoots', path: '/services/content-creation' },
+  { name: 'Social Media Marketing', desc: 'Viral trend hijacking & multi-platform community building', path: '/services/social-media' },
+  { name: 'Performance Marketing', desc: 'Hyper-targeted Meta Ads & Google ROI scaling', path: '/services/performance-marketing' },
+  { name: 'Digital Marketing', desc: 'Full-funnel organic & paid growth acceleration', path: '/services/digital-marketing' },
+  { name: 'SEO & Growth Strategy', desc: 'Organic visibility, technical optimization & high-intent traffic', path: '/services/seo-growth' },
 ];
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -40,15 +41,16 @@ export const Navbar = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setIsServicesOpen(false);
+    setMobileServicesOpen(false);
   }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    // { name: 'Influencer Marketing', path: '/#influencer-marketing', badge: 'Creator Hub' },
     { name: 'Services', path: '/services', hasDropdown: true },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Our Process', path: '/process' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -158,12 +160,17 @@ export const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className={({ isActive: isLinkActive }) =>
-                    `group relative text-sm font-medium transition-colors py-1 ${
+                    `group relative flex items-center gap-1.5 text-sm font-medium transition-colors py-1 ${
                       isLinkActive ? 'text-[#FFD67A]' : 'text-[#F6F0E5] hover:text-[#FFD67A]'
                     }`
                   }
                 >
                   <span>{link.name}</span>
+                  {link.badge && (
+                    <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-gradient-to-r from-[#E5A43A] to-[#FFD67A] text-[#061315] tracking-tight shadow-sm">
+                      {link.badge}
+                    </span>
+                  )}
                   <span
                     className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#008F8C] to-[#E5A43A] transition-all duration-300 ease-out ${
                       isActive ? 'w-full' : 'w-0 group-hover:w-full'
@@ -224,30 +231,103 @@ export const Navbar = () => {
                   </button>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-3">
-                  {navLinks.map((link, idx) => (
-                    <motion.div
-                      key={link.name}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.04 * idx }}
-                    >
-                      <NavLink
-                        to={link.path}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={({ isActive: isLinkActive }) =>
-                          `text-lg font-heading font-semibold py-2.5 px-3 rounded-xl flex items-center justify-between transition-colors ${
-                            isLinkActive
-                              ? 'bg-[#008F8C]/20 text-[#FFD67A] border border-[#008F8C]/40'
-                              : 'text-[#F6F0E5] hover:text-[#FFD67A] hover:bg-white/5'
-                          }`
-                        }
+                <div className="mt-8 flex flex-col gap-2">
+                  {navLinks.map((link, idx) => {
+                    if (link.hasDropdown) {
+                      return (
+                        <div key={link.name} className="flex flex-col">
+                          <div className="flex items-center justify-between rounded-xl hover:bg-white/5 transition-colors">
+                            {/* Main link to /services */}
+                            <NavLink
+                              to={link.path}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={({ isActive: isLinkActive }) =>
+                                `text-lg font-heading font-semibold py-2.5 px-3 flex-1 flex items-center gap-2 transition-colors ${
+                                  isLinkActive ? 'text-[#FFD67A]' : 'text-[#F6F0E5] hover:text-[#FFD67A]'
+                                }`
+                              }
+                            >
+                              <span>{link.name}</span>
+                            </NavLink>
+
+                            {/* Dropdown toggle button */}
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                setMobileServicesOpen(!mobileServicesOpen);
+                              }}
+                              aria-label="Toggle services dropdown"
+                              className="p-3 text-[#008F8C] hover:text-[#FFD67A] transition-colors cursor-pointer"
+                            >
+                              <ChevronDown
+                                className={`w-5 h-5 transition-transform duration-300 ${
+                                  mobileServicesOpen ? 'rotate-180 text-[#FFD67A]' : ''
+                                }`}
+                              />
+                            </button>
+                          </div>
+
+                          {/* Mobile Services Accordion Sub-menu */}
+                          <AnimatePresence>
+                            {mobileServicesOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.25 }}
+                                className="overflow-hidden pl-3 pr-1 py-1 flex flex-col gap-1 border-l-2 border-[#008F8C]/40 ml-4 my-1"
+                              >
+                                {servicesList.map((svc) => (
+                                  <Link
+                                    key={svc.name}
+                                    to={svc.path}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="py-2 px-3 rounded-lg text-sm text-[#AAB8B8] hover:text-[#FFD67A] hover:bg-white/5 flex items-center justify-between transition-colors font-medium"
+                                  >
+                                    <span>{svc.name}</span>
+                                    <ArrowRight className="w-3.5 h-3.5 text-[#008F8C]/60" />
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      );
+                    }
+
+                    return (
+                      <motion.div
+                        key={link.name}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.04 * idx }}
                       >
-                        <span>{link.name}</span>
-                        <ArrowRight className="w-4 h-4 text-[#008F8C]" />
-                      </NavLink>
-                    </motion.div>
-                  ))}
+                        <NavLink
+                          to={link.path}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={({ isActive: isLinkActive }) =>
+                            `text-lg font-heading font-semibold py-2.5 px-3 rounded-xl flex items-center justify-between transition-colors ${
+                              isLinkActive
+                                ? 'bg-[#008F8C]/20 text-[#FFD67A] border border-[#008F8C]/40'
+                                : 'text-[#F6F0E5] hover:text-[#FFD67A] hover:bg-white/5'
+                            }`
+                          }
+                        >
+                          <div className="flex items-center gap-2">
+                            <span>{link.name}</span>
+                            {link.badge && (
+                              <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-gradient-to-r from-[#E5A43A] to-[#FFD67A] text-[#061315]">
+                                {link.badge}
+                              </span>
+                            )}
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-[#008F8C]" />
+                        </NavLink>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
 

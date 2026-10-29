@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 70" width="100%" height="100%">
+  <!-- Beco Leaf Emblem in Eco Circle -->
+  <g transform="translate(10, 10)">
+    <circle cx="25" cy="25" r="25" fill="#008F8C" opacity="0.15" />
+    <circle cx="25" cy="25" r="21" fill="#138A56" />
+    <!-- Leaf Sprout in center of circle -->
+    <path d="M25 12 C18 17 17 26 25 34 C33 26 32 17 25 12 Z" fill="#A4DE02" />
+    <path d="M25 18 L25 32" stroke="#138A56" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+  <!-- BECO Wordmark in iconic bold round typography -->
+  <text x="72" y="44" font-family="'Outfit', 'Inter', sans-serif" font-size="36" font-weight="900" letter-spacing="-1" fill="#FFFFFF">
+    beco
+  </text>
+  <!-- Green leaf accent over the dot of eco -->
+  <path d="M148 18 C144 14 140 18 148 24 C152 18 152 15 148 18 Z" fill="#A4DE02" />
+  <text x="73" y="58" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.5" fill="#138A56">ECO-FRIENDLY &amp; SUSTAINABLE</text>
+</svg>

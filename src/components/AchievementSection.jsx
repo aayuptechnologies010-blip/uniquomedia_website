@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const achievementData = [
-  { value: 100, suffix: '+', label: 'Happy Clients', sub: 'Across 12+ industry sectors' },
-  { value: 250, suffix: '+', label: 'Campaigns Executed', sub: 'Multi-platform omni-funnel' },
-  { value: 10, suffix: 'M+', label: 'Digital Reach', sub: 'High-intent buyer impressions' },
-  { value: 95, suffix: '%', label: 'Client Satisfaction', sub: 'Annual retention rate' },
+  { value: 28, suffix: '+', label: 'Happy Clients', sub: 'Across top brands & high-growth D2C' },
+  { value: 65, suffix: '+', label: 'Campaigns Executed', sub: 'Creator-led & performance marketing' },
+  { value: 15, suffix: 'M+', label: 'Organic & Creator Reach', sub: 'High-intent audience impressions' },
+  { value: 98, suffix: '%', label: 'Client Satisfaction', sub: 'Long-term partnership retention' },
 ];
 
 const CounterItem = ({ target, suffix, label, sub, delay }) => {

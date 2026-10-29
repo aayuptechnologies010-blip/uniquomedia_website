@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
+import BrandShowcase from '../components/BrandShowcase';
+import InfluencerMarketingSection from '../components/InfluencerMarketingSection';
+import CorePillarsSection from '../components/CorePillarsSection';
 import StatsBar from '../components/StatsBar';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
@@ -22,6 +25,9 @@ export const HomePage = () => {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
     >
       <Hero />
+      <BrandShowcase />
+      <InfluencerMarketingSection />
+      <CorePillarsSection />
       <StatsBar />
       <AboutSection />
       <ServicesSection />

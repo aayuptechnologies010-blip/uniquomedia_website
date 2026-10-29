@@ -3,9 +3,9 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const InteractiveHeroVisual = ({
   imageSrc,
-  alt = "Uniquo Media Hero Visual",
-  badgeText = "Live Performance Matrix",
-  badgeMetric = "+348% ROI",
+  alt = "Uniquo Media Creator & Influencer Marketing Visual",
+  badgeText = "Creator Partnerships Hub",
+  badgeMetric = "4.8x ROAS",
   orbitGold = true,
   floatingPills = [],
 }) => {
