@@ -172,7 +172,21 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#AAB8B8]">
-          <p>© 2026 Uniquo Media. All Rights Reserved. Crafted for scalable enterprise growth.</p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <p>© 2026 Uniquo Media. All Rights Reserved.</p>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <p className="flex items-center gap-1">
+              Developed by{' '}
+              <a
+                href="https://aayuptechnologies.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-[#FFD67A] hover:text-[#008F8C] transition-colors underline underline-offset-4 decoration-[#FFD67A]/40 hover:decoration-[#008F8C]"
+              >
+                Aayup Team
+              </a>
+            </p>
+          </div>
           
           <button
             onClick={scrollToTop}
