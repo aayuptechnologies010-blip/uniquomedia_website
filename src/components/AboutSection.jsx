@@ -50,7 +50,7 @@ export const AboutSection = () => {
               className="absolute -top-6 -left-6 w-18 h-18 rounded-2xl bg-gradient-to-br from-[#FFD67A] to-[#E5A43A] p-0.5 shadow-[0_10px_30px_rgba(229,164,58,0.45)] z-20 flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#061315] rounded-2xl p-2 flex items-center justify-center">
-                <img src="/uniquomedia-logo.png" alt="Uniquo Media Brand" className="w-full h-full object-contain" />
+                <img src="/uniquomedia-logo.png" alt="Uniqo Media Brand" className="w-full h-full object-contain" />
               </div>
             </motion.div>
 
@@ -61,7 +61,7 @@ export const AboutSection = () => {
               <div className="relative h-[440px] sm:h-[500px] w-full overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80"
-                  alt="Uniquo Media Growth Strategy Room"
+                  alt="Uniqo Media Growth Strategy Room"
                   className="w-full h-full object-cover transform group-hover:scale-108 transition-transform duration-700 ease-out filter brightness-75 contrast-110"
                 />
 
@@ -132,7 +132,7 @@ export const AboutSection = () => {
               transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 text-base sm:text-lg text-[#AAB8B8] leading-relaxed"
             >
-              Uniquo Media is a result-focused marketing agency helping businesses build stronger digital identities, reach the right audience and convert attention into sustainable growth.
+              Uniqo Media is a result-focused marketing agency helping businesses build stronger digital identities, reach the right audience and convert attention into sustainable growth.
             </motion.p>
 
             {/* Highlights Grid */}
@@ -173,7 +173,7 @@ export const AboutSection = () => {
               className="mt-10"
             >
               <PremiumButton href="/about" variant="primary" icon="arrow">
-                More About Uniquo
+                More About Uniqo
               </PremiumButton>
             </motion.div>
           </div>

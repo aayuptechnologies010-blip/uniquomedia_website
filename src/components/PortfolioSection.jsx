@@ -146,7 +146,7 @@ export const PortfolioSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-5 text-sm sm:text-lg text-[#AAB8B8] max-w-2xl leading-relaxed font-normal"
           >
-            Explore case studies from industry titans and high-growth consumer labels who scaled with Uniquo Media's creator and performance engines.
+            Explore case studies from industry titans and high-growth consumer labels who scaled with Uniqo Media's creator and performance engines.
           </motion.p>
         </div>
 

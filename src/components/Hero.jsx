@@ -7,7 +7,7 @@ const bannerSlides = [
   {
     id: 1,
     image: '/banners/slider-1.png',
-    alt: 'Grow Your Brand With Creative Strategy - Uniquo Media',
+    alt: 'Grow Your Brand With Creative Strategy - Uniqo Media',
     buttonTarget: '/contact',
     hasDedicatedButton: false,
   },

@@ -63,7 +63,7 @@ export const AboutPage = () => {
           <div className="relative w-full aspect-[16/9] sm:aspect-[1870/841] overflow-hidden flex items-center justify-center bg-[#061315]">
             <img
               src="/banners/about-banner.jpg"
-              alt="Creative Minds. Strategic Thinking. Measurable Growth - About Uniquo Media"
+              alt="Creative Minds. Strategic Thinking. Measurable Growth - About Uniqo Media"
               className="w-full h-full object-contain object-center pointer-events-none"
               loading="eager"
             />
@@ -82,13 +82,24 @@ export const AboutPage = () => {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-3xl bg-gradient-to-br from-[#0F282A] via-[#0A1D1E] to-[#061315] border border-[#008F8C]/40 p-8 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.7)] overflow-hidden glow-teal">
                 <div className="w-16 h-16 rounded-2xl bg-[#061315] border border-[#E5A43A]/50 p-2 mb-6 flex items-center justify-center">
-                  <img src="/uniquomedia-logo.png" alt="Uniquo Media" className="w-full h-full object-contain" />
+                  <img src="/uniquomedia-logo.png" alt="Uniqo Media" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#F6F0E5] mb-3">
-                  The Uniquo Media Formula
+                <h3 className="font-heading font-black text-2xl sm:text-3xl text-[#F6F0E5] mb-1">
+                  The Uniqo Media Formula
                 </h3>
+                <p className="text-xs font-semibold text-[#FFD67A] uppercase tracking-wider mb-3">
+                  A Division of{' '}
+                  <a
+                    href="https://aayuptechnologies.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-white transition-colors"
+                  >
+                    Aayup Technologies
+                  </a>
+                </p>
                 <p className="text-sm sm:text-base text-[#AAB8B8] leading-relaxed mb-6 font-normal">
-                  Founded with the conviction that digital attention is the most valuable commodity in modern commerce, Uniquo Media fuses behavioral consumer psychology with quantitative performance advertising and creator ecosystem mastery.
+                  Founded with the conviction that digital attention is the most valuable commodity in modern commerce, Uniqo Media operates as the dedicated marketing division of Aayup Technologies, fusing behavioral consumer psychology with quantitative performance advertising and creator ecosystem mastery.
                 </p>
                 <div className="p-4 rounded-xl bg-[#061315] border border-white/10 flex items-center justify-between">
                   <div>

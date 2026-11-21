@@ -52,7 +52,7 @@ export const PageLoader = ({ isVisible }) => {
             >
               <img
                 src="/uniquomedia-logo.png"
-                alt="Uniquo Media Loading"
+                alt="Uniqo Media Loading"
                 className="w-full h-full object-contain filter drop-shadow-[0_0_12px_rgba(229,164,58,0.4)]"
               />
             </motion.div>
@@ -66,7 +66,7 @@ export const PageLoader = ({ isVisible }) => {
             className="mt-8 flex flex-col items-center text-center"
           >
             <div className="flex items-center gap-1.5 font-heading text-xl font-black text-[#F6F0E5] tracking-tight">
-              <span>Uniquo</span>
+              <span>Uniqo</span>
               <span className="bg-gradient-to-r from-[#FFD67A] to-[#E5A43A] bg-clip-text text-transparent">Media</span>
             </div>
             

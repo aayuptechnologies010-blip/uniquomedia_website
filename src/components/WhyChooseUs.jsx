@@ -72,7 +72,7 @@ export const WhyChooseUs = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#008F8C]/20 to-[#FFD67A]/20 border border-[#FFD67A]/40 text-[#FFD67A] text-xs font-bold tracking-[0.2em] uppercase mb-4 shadow-sm"
           >
             <Sparkles className="w-3.5 h-3.5 text-[#FFD67A]" />
-            THE UNIQUO ADVANTAGE
+            THE UNIQO ADVANTAGE
           </motion.div>
 
           <motion.h2
@@ -84,7 +84,7 @@ export const WhyChooseUs = () => {
           >
             Why Industry Leaders Choose{' '}
             <span className="text-gradient-teal-gold block sm:inline">
-              Uniquo Media
+              Uniqo Media
             </span>
           </motion.h2>
 
@@ -183,7 +183,7 @@ export const WhyChooseUs = () => {
         <div className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-[#0F282A] via-[#0A1D1E] to-[#0F282A] border border-[#FFD67A]/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div>
             <h4 className="font-heading font-black text-xl sm:text-2xl text-[#F6F0E5]">
-              Ready to Upgrade Your Brand to the Uniquo Standard?
+              Ready to Upgrade Your Brand to the Uniqo Standard?
             </h4>
             <p className="text-xs sm:text-sm text-[#AAB8B8] mt-1">
               Join Bajaj, JioHotstar, Xiaomi, and high-growth consumer labels winning with our framework.

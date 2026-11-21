@@ -18,7 +18,7 @@ const testimonials = [
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80',
     review:
-      'Uniquo Media completely revolutionized our digital pipeline. Their targeted campaign for our high-end residential towers delivered over 1,800 ultra-qualified inquiries, scaling our quarterly bookings past $14M in record time. Truly world-class strategists.',
+      'Uniqo Media completely revolutionized our digital pipeline. Their targeted campaign for our high-end residential towers delivered over 1,800 ultra-qualified inquiries, scaling our quarterly bookings past $14M in record time. Truly world-class strategists.',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const testimonials = [
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80',
     review:
-      'Before Uniquo, our paid ads had plateaued at 2.1x ROAS. In just 90 days of onboarding their creative sprint team, our blended return skyrocketed to 5.2x while cutting customer acquisition costs in half. Their weekly insights are indispensably precise.',
+      'Before Uniqo, our paid ads had plateaued at 2.1x ROAS. In just 90 days of onboarding their creative sprint team, our blended return skyrocketed to 5.2x while cutting customer acquisition costs in half. Their weekly insights are indispensably precise.',
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const testimonials = [
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80',
     review:
-      'Patient acquisition in healthcare requires empathy and trust. Uniquo Media designed a thoughtful local SEO and video documentary campaign that filled our consult calendars to 98% capacity within 60 days. Highly ethical and transparent.',
+      'Patient acquisition in healthcare requires empathy and trust. Uniqo Media designed a thoughtful local SEO and video documentary campaign that filled our consult calendars to 98% capacity within 60 days. Highly ethical and transparent.',
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const testimonials = [
     rating: 5,
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80',
     review:
-      'Our applicant quality improved by 340% following Uniquo Media’s omnichannel strategy. They do not just drive clicks—they deeply study prospective student decision triggers and craft messaging that converts with surgical precision.',
+      'Our applicant quality improved by 340% following Uniqo Media’s omnichannel strategy. They do not just drive clicks—they deeply study prospective student decision triggers and craft messaging that converts with surgical precision.',
   },
 ];
 
@@ -91,7 +91,7 @@ export const Testimonials = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="mt-4 text-base sm:text-lg text-[#AAB8B8]"
           >
-            Discover how visionary founders and enterprise marketing leaders scale their digital footprints with Uniquo Media.
+            Discover how visionary founders and enterprise marketing leaders scale their digital footprints with Uniqo Media.
           </motion.p>
         </div>
 

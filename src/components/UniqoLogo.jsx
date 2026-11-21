@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const UniquoLogo = ({ 
+export const UniqoLogo = ({ 
   className = "h-11", 
   showText = true, 
   variant = "full", // "full" | "icon"
@@ -19,7 +19,7 @@ export const UniquoLogo = ({
       <div className="relative flex-shrink-0 flex items-center justify-center h-11 w-11 sm:h-12 sm:w-12 rounded-xl bg-[#061315] border border-[#008F8C]/40 group-hover:border-[#E5A43A]/80 shadow-[0_0_15px_rgba(0,143,140,0.25)] group-hover:shadow-[0_0_25px_rgba(229,164,58,0.4)] transition-all duration-400 overflow-hidden p-1">
         <img
           src="/uniquomedia-logo.png"
-          alt="Uniquo Media Logo"
+          alt="Uniqo Media Logo"
           className="w-full h-full object-contain transform group-hover:scale-108 transition-transform duration-400"
           loading="eager"
         />
@@ -30,13 +30,13 @@ export const UniquoLogo = ({
       {showText && (
         <div className="flex flex-col leading-tight">
           <div className="flex items-center gap-1 font-heading text-xl sm:text-2xl font-black tracking-tight text-[#F6F0E5]">
-            <span className="text-[#F6F0E5] tracking-tight">Uniquo</span>
+            <span className="text-[#F6F0E5] tracking-tight">Uniqo</span>
             <span className="bg-gradient-to-r from-[#008F8C] via-[#FFD67A] to-[#E5A43A] bg-clip-text text-transparent">
               Media
             </span>
           </div>
-          <span className="text-[9px] uppercase tracking-[0.24em] text-[#008F8C] font-semibold -mt-0.5 group-hover:text-[#FFD67A] transition-colors">
-            Marketing Agency
+          <span className="text-[8.5px] uppercase tracking-[0.2em] text-[#AAB8B8] font-medium -mt-0.5 group-hover:text-[#FFD67A] transition-colors flex items-center gap-1">
+            <span className="text-[#008F8C] font-bold">A Division of</span> Aayup Technologies
           </span>
         </div>
       )}
@@ -44,4 +44,4 @@ export const UniquoLogo = ({
   );
 };
 
-export default UniquoLogo;
+export default UniqoLogo;

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const InteractiveHeroVisual = ({
   imageSrc,
-  alt = "Uniquo Media Creator & Influencer Marketing Visual",
+  alt = "Uniqo Media Creator & Influencer Marketing Visual",
   badgeText = "Creator Partnerships Hub",
   badgeMetric = "4.8x ROAS",
   orbitGold = true,

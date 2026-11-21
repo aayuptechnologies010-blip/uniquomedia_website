@@ -85,8 +85,8 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold text-[#AAB8B8] uppercase tracking-wider block">Official Inquiries</span>
-                  <a href="mailto:info@uniquomedia.com" className="text-sm sm:text-base font-bold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
-                    info@uniquomedia.com
+                  <a href="mailto:business@uniqomedia.com" className="text-sm sm:text-base font-bold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
+                    business@uniqomedia.com
                   </a>
                 </div>
               </div>
@@ -96,9 +96,9 @@ export const ContactSection = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-bold text-[#AAB8B8] uppercase tracking-wider block">Direct Line</span>
-                  <a href="tel:+919999999999" className="text-sm sm:text-base font-bold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
-                    +91 99999 99999
+                  <span className="text-[11px] font-bold text-[#AAB8B8] uppercase tracking-wider block">Direct Line &amp; WhatsApp</span>
+                  <a href="tel:+919170471804" className="text-sm sm:text-base font-bold text-[#F6F0E5] hover:text-[#FFD67A] transition-colors">
+                    +91 91704 71804
                   </a>
                 </div>
               </div>

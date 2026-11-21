@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom';
 import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
-import UniquoLogo from './UniquoLogo';
+import UniqoLogo from './UniqoLogo';
 import PremiumButton from './PremiumButton';
 
 const servicesList = [
@@ -66,7 +66,7 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo with Real Asset */}
           <Link to="/" className="outline-none">
-            <UniquoLogo />
+            <UniqoLogo />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -221,7 +221,7 @@ export const Navbar = () => {
             >
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-white/10">
-                  <UniquoLogo onClick={() => setMobileMenuOpen(false)} />
+                  <UniqoLogo onClick={() => setMobileMenuOpen(false)} />
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     aria-label="Close menu"
@@ -343,7 +343,7 @@ export const Navbar = () => {
                   Get Free Consultation
                 </PremiumButton>
                 <div className="text-center text-xs text-[#AAB8B8] mt-4 font-mono">
-                  info@uniquomedia.com • +91 98765 43210
+                  business@uniqomedia.com • +91 91704 71804
                 </div>
               </div>
             </motion.div>

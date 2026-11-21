@@ -34,7 +34,7 @@ export const ServicesPage = () => {
           <div className="relative w-full aspect-[16/9] sm:aspect-[1365/614] overflow-hidden flex items-center justify-center bg-[#061315]">
             <img
               src="/banners/influncer-banner.jpg"
-              alt="Uniquo Media Influencer Marketing"
+              alt="Uniqo Media Influencer Marketing"
               className="w-full h-full object-contain object-center pointer-events-none"
               loading="eager"
             />

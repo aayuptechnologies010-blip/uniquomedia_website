@@ -337,7 +337,7 @@ export const InfluencerMarketingSection = () => {
                     The 5-Step Influencer Campaign Engine
                   </h3>
                   <p className="text-xs sm:text-sm text-[#AAB8B8] mt-2">
-                    How Uniquo Media coordinates hundreds of creators into a seamless, high-ROI launch for brands like Bajaj, JioHotstar, Xiaomi &amp; Beco.
+                    How Uniqo Media coordinates hundreds of creators into a seamless, high-ROI launch for brands like Bajaj, JioHotstar, Xiaomi &amp; Beco.
                   </p>
                 </div>
 

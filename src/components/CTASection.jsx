@@ -72,7 +72,7 @@ export const CTASection = () => {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="mt-6 text-sm sm:text-lg text-[#AAB8B8] leading-relaxed font-normal"
             >
-              Stop burning capital on unmeasured marketing experiments. Partner with Uniquo Media to engineer predictable creator campaigns, viral video systems, and high-ROAS paid media funnels.
+              Stop burning capital on unmeasured marketing experiments. Partner with Uniqo Media to engineer predictable creator campaigns, viral video systems, and high-ROAS paid media funnels.
             </motion.p>
 
             {/* Quick Proof Badges */}
@@ -98,7 +98,7 @@ export const CTASection = () => {
               <PremiumButton href="/contact" variant="primary" icon="arrow" className="text-sm px-8 py-4 justify-center">
                 Launch Your Campaign Today
               </PremiumButton>
-              <PremiumButton href="https://wa.me/919999999999" variant="secondary" icon="none" className="text-sm px-7 py-4 justify-center">
+              <PremiumButton href="https://wa.me/919170471804" variant="secondary" icon="none" className="text-sm px-7 py-4 justify-center">
                 <MessageCircle className="w-4 h-4 mr-2 text-[#00E5A3]" />
                 Direct WhatsApp Channel
               </PremiumButton>

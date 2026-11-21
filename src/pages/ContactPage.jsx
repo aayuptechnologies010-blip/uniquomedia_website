@@ -19,7 +19,7 @@ export const ContactPage = () => {
           <div className="relative w-full aspect-[16/9] sm:aspect-[1870/841] overflow-hidden flex items-center justify-center bg-[#061315]">
             <img
               src="/banners/contact-banner.jpg"
-              alt="Let's Create Something That Grows Together - Contact Uniquo Media"
+              alt="Let's Create Something That Grows Together - Contact Uniqo Media"
               className="w-full h-full object-contain object-center pointer-events-none"
               loading="eager"
             />
@@ -30,7 +30,7 @@ export const ContactPage = () => {
       {/* Main Interactive Contact Section */}
       <ContactSection />
 
-      {/* Why Clients Choose Uniquo Media */}
+      {/* Why Clients Choose Uniqo Media */}
       <WhyChooseUs />
     </motion.div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
-import UniquoLogo from './UniquoLogo';
+import UniqoLogo from './UniqoLogo';
 
 const companyLinks = [
   { name: 'Home', path: '/' },
@@ -81,15 +81,46 @@ export const Footer = () => {
         {/* Main 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
           
-          {/* Brand Col with actual Uniquo Media logo image */}
+          {/* Brand Col with actual Uniqo Media logo image */}
           <div className="lg:col-span-2 flex flex-col items-start">
             <Link to="/" className="outline-none">
-              <UniquoLogo />
+              <UniqoLogo />
             </Link>
             
-            <p className="mt-5 text-sm text-[#AAB8B8] max-w-sm leading-relaxed font-normal">
-              Turning ideas into impact through strategy, creativity and performance-driven marketing. We partner with ambitious leaders to engineer sustainable market advantages.
+            <div className="mt-3.5 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#008F8C]/10 border border-[#008F8C]/30 text-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FFD67A] animate-pulse" />
+              <span className="text-white/80 font-medium">Strategic Marketing Division of</span>
+              <a
+                href="https://aayuptechnologies.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-[#FFD67A] hover:text-[#008F8C] transition-colors underline underline-offset-2"
+              >
+                Aayup Technologies
+              </a>
+            </div>
+
+            <p className="mt-4 text-sm text-[#AAB8B8] max-w-sm leading-relaxed font-normal">
+              Empowering brands with high-conversion performance advertising, viral influencer partnerships, and cinematic video storytelling under the technology umbrella of Aayup Technologies.
             </p>
+
+            {/* Quick Contact Info */}
+            <div className="mt-4 flex flex-col gap-1.5 text-xs">
+              <a
+                href="mailto:business@uniqomedia.com"
+                className="text-[#AAB8B8] hover:text-[#FFD67A] transition-colors"
+              >
+                ✉ business@uniqomedia.com
+              </a>
+              <a
+                href="https://wa.me/919170471804"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#AAB8B8] hover:text-[#FFD67A] transition-colors"
+              >
+                📞 +91 91704 71804 (Call / WhatsApp)
+              </a>
+            </div>
 
             {/* Social Icons with signature gold fill & hover rotation */}
             <div className="mt-8 flex items-center gap-3">
@@ -173,7 +204,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#AAB8B8]">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-            <p>© 2026 Uniquo Media. All Rights Reserved.</p>
+            <p>© 2026 Uniqo Media. All Rights Reserved.</p>
             <span className="hidden sm:inline text-white/20">•</span>
             <p className="flex items-center gap-1">
               Developed by{' '}
