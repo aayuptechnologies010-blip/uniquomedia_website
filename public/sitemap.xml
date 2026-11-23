@@ -2,84 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Home Page -->
   <url>
-    <loc>https://uniquomedia-website.vercel.app/</loc>
+    <loc>https://www.uniqomedia.com/</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Services Hub -->
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services</loc>
+    <loc>https://www.uniqomedia.com/services</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Dedicated Service Detail Pages -->
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/influencer-marketing</loc>
+    <loc>https://www.uniqomedia.com/services/influencer-marketing</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/video-editing</loc>
+    <loc>https://www.uniqomedia.com/services/video-editing</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/performance-marketing</loc>
+    <loc>https://www.uniqomedia.com/services/performance-marketing</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/seo-organic</loc>
+    <loc>https://www.uniqomedia.com/services/seo-organic</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/content-creation</loc>
+    <loc>https://www.uniqomedia.com/services/content-creation</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/social-media</loc>
+    <loc>https://www.uniqomedia.com/services/social-media</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/scripting-copywriting</loc>
+    <loc>https://www.uniqomedia.com/services/scripting-copywriting</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://uniquomedia-website.vercel.app/services/digital-strategy</loc>
+    <loc>https://www.uniqomedia.com/services/digital-strategy</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Portfolio / Case Studies -->
   <url>
-    <loc>https://uniquomedia-website.vercel.app/portfolio</loc>
+    <loc>https://www.uniqomedia.com/portfolio</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <!-- About Us -->
   <url>
-    <loc>https://uniquomedia-website.vercel.app/about</loc>
+    <loc>https://www.uniqomedia.com/about</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Contact Page -->
   <url>
-    <loc>https://uniquomedia-website.vercel.app/contact</loc>
+    <loc>https://www.uniqomedia.com/contact</loc>
     <lastmod>2026-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
