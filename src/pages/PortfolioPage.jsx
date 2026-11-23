@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PortfolioSection from '../components/PortfolioSection';
@@ -8,6 +8,10 @@ import Testimonials from '../components/Testimonials';
 import CTASection from '../components/CTASection';
 
 export const PortfolioPage = () => {
+  useEffect(() => {
+    document.title = 'Client Case Studies & Marketing Portfolio | Uniqo Media';
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}

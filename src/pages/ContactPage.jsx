@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ContactSection from '../components/ContactSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 
 export const ContactPage = () => {
+  useEffect(() => {
+    document.title = 'Contact Us | Partner With Uniqo Media — A Division of Aayup Technologies';
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}

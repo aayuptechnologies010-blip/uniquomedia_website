@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ProcessSection from '../components/ProcessSection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import CTASection from '../components/CTASection';
 
 export const ProcessPage = () => {
+  useEffect(() => {
+    document.title = 'Our Growth Process & Performance Framework | Uniqo Media';
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}

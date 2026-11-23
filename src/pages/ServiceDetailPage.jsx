@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import {
@@ -221,6 +221,12 @@ export const serviceDetailsData = {
 export const ServiceDetailPage = () => {
   const { serviceSlug } = useParams();
   const service = serviceDetailsData[serviceSlug];
+
+  useEffect(() => {
+    if (service) {
+      document.title = `${service.title} | Uniqo Media — Aayup Technologies`;
+    }
+  }, [service]);
 
   // If service does not exist, redirect to /services
   if (!service) {

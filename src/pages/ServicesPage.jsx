@@ -11,6 +11,10 @@ export const ServicesPage = () => {
   const location = useLocation();
 
   useEffect(() => {
+    document.title = 'Services & Digital Marketing Solutions | Uniqo Media — Aayup Technologies';
+  }, []);
+
+  useEffect(() => {
     if (location.hash) {
       const el = document.querySelector(location.hash);
       if (el) {
