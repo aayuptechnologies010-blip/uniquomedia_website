@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import BrandShowcase from '../components/BrandShowcase';
@@ -17,6 +17,10 @@ import CTASection from '../components/CTASection';
 import ContactSection from '../components/ContactSection';
 
 export const HomePage = () => {
+  useEffect(() => {
+    document.title = 'Uniqo Media — Official Digital Growth & Marketing Division of Aayup Technologies';
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}

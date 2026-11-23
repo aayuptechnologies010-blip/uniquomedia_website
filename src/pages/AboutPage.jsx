@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Target, ShieldCheck, Zap, Award, Users, CheckCircle2, ArrowRight } from 'lucide-react';
@@ -49,6 +49,10 @@ const leadership = [
 ];
 
 export const AboutPage = () => {
+  useEffect(() => {
+    document.title = 'About Us | Uniqo Media — A Division of Aayup Technologies';
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
